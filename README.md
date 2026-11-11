@@ -17,7 +17,7 @@ Sou desenvolvedor **Full Stack**, focado em aplicações web, APIs e integraçõ
 <br />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/victorbathich/victorbathich/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/victorbathich/victorbathich/output/github-snake.svg" />
-  <img alt="Cobrinha percorrendo o gráfico de contribuições" src="https://raw.githubusercontent.com/victorbathich/victorbathich/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/victorbathich/victorbathich/output/dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/victorbathich/victorbathich/output/light.svg" />
+  <img alt="Jogo de Breakout quebrando os blocos do gráfico de contribuições" src="https://raw.githubusercontent.com/victorbathich/victorbathich/output/light.svg" />
 </picture>

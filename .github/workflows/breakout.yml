@@ -1,6 +1,6 @@
-# Gera a animação da cobrinha a partir do gráfico de contribuições
+# Gera a animação de Breakout a partir do gráfico de contribuições
 # e publica os SVGs na branch "output" (o README e a main não são alterados).
-name: Snake animation
+name: Breakout animation
 
 on:
   schedule:
@@ -9,12 +9,12 @@ on:
   push:
     branches: [main]
     paths:
-      - .github/workflows/snake.yml
+      - .github/workflows/breakout.yml
 
 permissions: {}
 
 concurrency:
-  group: snake
+  group: breakout
   cancel-in-progress: false
 
 jobs:
@@ -24,19 +24,17 @@ jobs:
     permissions:
       contents: write # necessário apenas para gravar na branch output
     steps:
-      - name: Gerar SVGs
-        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+      - name: Gerar SVGs (claro e escuro)
+        uses: cyprieng/github-breakout@60c43dca3a1361fbc9fb9bb533b5193296345c4f # v1.2.4
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=#2EA043
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#3FB950
+          github_username: ${{ github.repository_owner }}
+          output_path: dist
 
       - name: Publicar na branch output
         uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "chore: atualiza snake animation"
+          commit_message: "chore: atualiza breakout"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
