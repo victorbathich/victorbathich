@@ -1,2 +1,6 @@
 # Documentos de trabalho (ex.: o guia do perfil) não devem ir para o repositório público.
 *.docx
+
+# Saída local do scripts/pacman.mjs
+node_modules/
+dist/
