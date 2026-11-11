@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Victor · Full Stack Developer</title>
+  <desc id="desc">Banner escuro com linhas abstratas em verde e azul conectando pontos, como uma rede de serviços.</desc>
+  <defs>
+    <radialGradient id="glowGreen" cx="0" cy="1" r="0.9">
+      <stop offset="0" stop-color="#2EA043" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#2EA043" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="1" cy="0" r="0.8">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3FB950"/>
+      <stop offset="1" stop-color="#58A6FF"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3FB950" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#3FB950" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0.7"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#E6EDF3" fill-opacity="0.07"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="dotsMask">
+      <rect width="1200" height="300" fill="url(#fade)"/>
+    </mask>
+    <clipPath id="frame">
+      <rect width="1200" height="300" rx="16"/>
+    </clipPath>
+    <style>
+      .flow { fill: none; stroke: url(#line); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 6 10; animation: flow 14s linear infinite; }
+      .flow.slow { animation-duration: 22s; opacity: 0.6; }
+      .node { fill: #0D1117; stroke-width: 2; }
+      .pulse { animation: pulse 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .pulse.d2 { animation-delay: 1.5s; }
+      .pulse.d3 { animation-delay: 3s; }
+      @keyframes flow { to { stroke-dashoffset: -320; } }
+      @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .flow, .pulse { animation: none; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="#0D1117"/>
+    <rect width="1200" height="300" fill="url(#dots)" mask="url(#dotsMask)"/>
+    <rect width="1200" height="300" fill="url(#glowGreen)"/>
+    <rect width="1200" height="300" fill="url(#glowBlue)"/>
+
+    <!-- Rede abstrata: linhas fluindo entre nós -->
+    <g>
+      <path class="flow" d="M 560 250 C 700 250, 720 150, 840 150 S 1000 70, 1150 70"/>
+      <path class="flow slow" d="M 600 60 C 720 60, 760 210, 900 210 S 1060 150, 1180 160"/>
+      <path class="flow" d="M 700 300 C 780 240, 860 260, 980 230 S 1100 250, 1200 220"/>
+      <path class="flow slow" d="M 840 150 L 900 210"/>
+      <path class="flow slow" d="M 980 230 L 1010 110"/>
+    </g>
+    <g>
+      <circle class="node pulse" cx="840" cy="150" r="7" stroke="#3FB950"/>
+      <circle class="node pulse d2" cx="900" cy="210" r="5" stroke="#58A6FF"/>
+      <circle class="node pulse d3" cx="1010" cy="110" r="6" stroke="#58A6FF"/>
+      <circle class="node pulse d2" cx="980" cy="230" r="5" stroke="#3FB950"/>
+      <circle class="node pulse" cx="1150" cy="70" r="5" stroke="#58A6FF"/>
+    </g>
+
+    <!-- Glifo decorativo de código -->
+    <text x="1040" y="190" fill="#E6EDF3" fill-opacity="0.05" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="150" font-weight="700" text-anchor="middle">&lt;/&gt;</text>
+
+    <!-- Texto de apresentação -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+      <text x="78" y="160" fill="#E6EDF3" font-size="108" font-weight="700" letter-spacing="-2">Victor</text>
+      <text x="82" y="222" fill="#3FB950" font-size="46" font-weight="600">Full Stack Developer</text>
+    </g>
+    <rect x="84" y="248" width="104" height="6" rx="3" fill="url(#accent)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="299" rx="15.5" fill="none" stroke="#30363D"/>
+</svg>
